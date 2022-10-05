@@ -15,5 +15,5 @@ provider "kubernetes" {
   host = module.cluster.endpoint
 
   cluster_ca_certificate = base64decode(module.cluster.ca_cert)
-  token                  = data.aws_eks_cluster_auth.this.token
+  token                  = data.aws_eks_cluster_auth.this.token    #토큰 형태로 집어넣음 
 }
